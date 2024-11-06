@@ -12,8 +12,12 @@ public class CancelChildOrder implements Action{
 
     private final ChildOrder orderToCancel;
 
-    public CancelChildOrder(ChildOrder orderToCancel) {
-        this.orderToCancel = orderToCancel;
+    public CancelChildOrder(long l) {
+        this.orderToCancel = l;
+    }
+
+    public CancelChildOrder(long orderId) {
+        //TODO Auto-generated constructor stub
     }
 
     @Override

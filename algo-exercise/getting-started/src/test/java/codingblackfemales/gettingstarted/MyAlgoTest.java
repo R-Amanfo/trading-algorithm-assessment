@@ -2,7 +2,7 @@ package codingblackfemales.gettingstarted;
 
 import codingblackfemales.algo.AlgoLogic;
 import org.junit.Test;
-
+import static org.junit.Assert.assertEquals;
 
 /**
  * This test is designed to check your algo behavior in isolation of the order book.
@@ -22,14 +22,23 @@ public class MyAlgoTest extends AbstractAlgoTest {
         return new MyAlgoLogic();
     }
 
-
     @Test
     public void testDispatchThroughSequencer() throws Exception {
-
         //create a sample market data tick....
         send(createTick());
+        //simple assert to check we had an order created
+        assertEquals(1, container.getState().getChildOrders().size());
 
-        //simple assert to check we had 3 orders created
-        //assertEquals(container.getState().getChildOrders().size(), 3);
+        //send another tick to trigger cancellation
+        send(createTick());
+        //verify order was cancelled
+        assertEquals(0, container.getState().getActiveChildOrders().size());
+
+        //create three more orders
+        send(createTick());
+        send(createTick());
+        send(createTick());
+        //verify we have three orders total
+        assertEquals(3, container.getState().getChildOrders().size());
     }
 }
