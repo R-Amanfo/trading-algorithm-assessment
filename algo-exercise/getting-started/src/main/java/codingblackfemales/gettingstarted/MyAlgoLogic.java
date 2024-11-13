@@ -12,6 +12,7 @@ import org.slf4j.LoggerFactory;
 
 public class MyAlgoLogic implements AlgoLogic {
     // Create a logger to help us see what's happening
+    // Create a logger to help us see what's happening
     private static final Logger logger = LoggerFactory.getLogger(MyAlgoLogic.class);
 
     // Track whether we should buy or sell next
@@ -25,8 +26,11 @@ public class MyAlgoLogic implements AlgoLogic {
     @Override
     public Action evaluate(SimpleAlgoState state) {
         // Get the current state of the order book as a string
+        // Get the current state of the order book as a string
         var orderBookAsString = Util.orderBookToString(state);
 
+        // Log the current state so we can see what's happening
+        logger.info("[MYALGO] Starting to evaluate...");
         // Log the current state so we can see what's happening
         logger.info("[MYALGO] Starting to evaluate...");
         logger.info("[MYALGO] The state of the order book is:\n" + orderBookAsString);
