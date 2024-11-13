@@ -50,6 +50,28 @@
             <version>1.5.7</version>
         </dependency>
 
+        <!-- Agrona -->
+        <dependency>
+            <groupId>org.agrona</groupId>
+            <artifactId>agrona</artifactId>
+            <version>1.20.0</version>
+        </dependency>
+
+        <!-- SBE Tools -->
+        <dependency>
+            <groupId>uk.co.real-logic</groupId>
+            <artifactId>sbe-tool</artifactId>
+            <version>1.30.0</version>
+        </dependency>
+
+        <!-- JUnit -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13.2</version>
+            <scope>test</scope>
+        </dependency>
+
     </dependencies>
 
     <build>

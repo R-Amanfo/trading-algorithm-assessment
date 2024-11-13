@@ -53,7 +53,7 @@ public class AlgoContainer implements Consumer {
         }
     }
 
-    private void runAlgoLogic(){
+    public void runAlgoLogic(){
         final var action = logic.evaluate(state);
 
         runTrigger.hasRun();

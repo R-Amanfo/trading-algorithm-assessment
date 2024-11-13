@@ -44,7 +44,7 @@ public abstract class AbstractAlgoTest extends SequencerTestCase {
     public abstract AlgoLogic createAlgoLogic();
 
 
-    protected UnsafeBuffer createTick(){
+    protected UnsafeBuffer createTick(int i, int j, int k, int l){
 
         final MessageHeaderEncoder headerEncoder = new MessageHeaderEncoder();
         final BookUpdateEncoder encoder = new BookUpdateEncoder();

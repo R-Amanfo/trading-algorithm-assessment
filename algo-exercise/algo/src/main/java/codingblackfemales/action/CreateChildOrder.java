@@ -46,4 +46,14 @@ public class CreateChildOrder implements Action {
         encoder.side(side);
         sequencer.onCommand(directBuffer);
     }
+
+    public Object getSide() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getSide'");
+    }
+
+    public Object getQuantity() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getQuantity'");
+    }
 }
